@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* flex box se le asigna al padre para que afecte al hijo*/
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.cabecera{
+    background-color: pink;
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    padding: 3%;
+}
+body{
+    background-color: aqua;
+
+}
+.cabecera__lista{
+    display: flex;
+    color: black;
+    flex-direction: row; /* opcional porque row es el defoult*/
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.cabecera__lista__link{
+    width: 250px;
+}
+.galeria{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "galeria__imagen1 galeria__imagen2 galeria__imagen3 galeria__imagen4 galeria__imagen5 galeria__imagen6";
+    grid-gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.arte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.galeria__imagen1{
+    grid-area: galeria__imagen1;
+}
+.galeria__imagen2 {
+    grid-area: galeria__imagen2;
+}
+.galeria__imagen3 {
+    grid-area: galeria__imagen3;
+}
+.galeria__imagen4 {
+    grid-area: galeria__imagen4;
+}
+.galeria__imagen5 {
+    grid-area: galeria__imagen5;
+}
+.galeria__imagen6 {
+    grid-area: galeria__imagen6;
+}
+.galeria__pintura{
+    width: 100%;
+    height: auto;
+
+}
+.pintura__nombre{
+    width: 100%;
+    background-color:black;
+}
+.pintura__titulo{
+    color:azure;
+    text-align: center;
+}
+.pintura__parrafo{
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 350px) {
+    .galeria{
+        display: grid;
+        width: 90%;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "galeria__imagen1" "galeria__imagen2" "galeria__imagen3" "galeria__imagen4" "galeria__imagen5" "galeria__imagen6" ;
+        grid-gap: 10px;
+        margin: 2rem auto;
+    }
+    
+}
+
+@media screen and (min-width: 600px) {
+    .galeria {
+        display: grid;
+        width: 90%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "galeria__imagen1 galeria__imagen2" "galeria__imagen3 galeria__imagen4" "galeria__imagen5 galeria__imagen6";
+        grid-gap: 10px;
+        margin: 5rem auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .galeria {
+        display: grid;
+        width: 90%;
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "galeria__imagen1 galeria__imagen2 galeria__imagen3" "galeria__imagen4 galeria__imagen5 galeria__imagen6";
+        grid-gap: 10px;
+        margin: 5rem auto;
+    }
+}
+footer{
+    background-color: pink;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+.whatsapp{
+    width: 10%;
+    padding-right: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}
+   
